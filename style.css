@@ -5,6 +5,7 @@
 
 body {
     padding: 0px 20px;
+    background-color: hsl(36, 100%, 99%);
 }
 
 #btn-open-menu {
