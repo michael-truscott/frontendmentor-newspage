@@ -25,6 +25,9 @@
       <li><a href="#">Trending</a></li>
       <li><a href="#">Categories</a></li>
     </ul>
+    <div id="btn-open-menu">
+      <img src="assets/images/icon-menu.svg" alt="Open Menu">
+    </div>
   </nav>
 
   <main>
@@ -91,5 +94,30 @@
       </div>
     </article>
   </main>
+
+  <div class="menu-fade hidden">
+  </div>
+
+  <script>
+    let menuOpen = false;
+    
+    const fadeOverlay = document.getElementsByClassName("menu-fade")[0];
+    const btnOpenMenu = document.getElementById("btn-open-menu");
+    const topNavbarUl = document.querySelector(".top-navbar ul");
+    btnOpenMenu.addEventListener("click", () => {
+      console.log("blah");
+      if (menuOpen) {
+        btnOpenMenu.querySelector("img").src = "assets/images/icon-menu.svg";
+        fadeOverlay.classList.add("hidden");
+        topNavbarUl.classList.remove("mobile-nav-open");
+        menuOpen = false;
+      } else {
+        btnOpenMenu.querySelector("img").src = "assets/images/icon-menu-close.svg";
+        fadeOverlay.classList.remove("hidden");
+        topNavbarUl.classList.add("mobile-nav-open");
+        menuOpen = true;
+      }
+    });
+  </script>
 </body>
 </html>
