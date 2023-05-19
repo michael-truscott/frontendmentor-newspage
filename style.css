@@ -186,3 +186,54 @@ main {
 h4 {
     font-weight: bolder;
 }
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0px 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .logo-container img {
+        height: 32px;
+    }
+
+    .top-navbar {
+        width: 100%;
+        padding: 30px 0;
+    }
+    .top-navbar ul {
+        display: none;
+    }
+
+    main {
+        width: 100%;
+        display: block;
+    }
+
+    .main-article {
+        display: block;
+    }
+
+    .main-article-description {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .main-blurb {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .new-articles {
+        margin: 60px 0;
+    }
+
+    .popular-article {
+        margin: 30px 0;
+    }
+}
